@@ -1,0 +1,30 @@
+.Monuments {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2rem
+  }
+  
+  @media screen and (min-width:768px){
+    .Monuments{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width:992px){
+    .Monuments{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 85vw;
+    }
+  }
+  
+  @media screen and (min-width:1024px){
+    .Monuments{
+        
+        grid-template-columns: repeat(4, 1fr) ;
+    }
+  }
+  
+  
+  

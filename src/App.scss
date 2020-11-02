@@ -3,28 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --primaryColor: #af9a7d;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+$mainBlack: #222;
+$mainGreen: #82b340;
+$mainGrey: #ececec;
+$mainWhite: #fff;
+
+body{
+    background: $mainWhite;
 }
 
 
-.Moments {
-  background-image: url("./images/121713043_1015885518858649_7896883708346715315_n.jpg");
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
 
 /* Navbar */
 .navbar {

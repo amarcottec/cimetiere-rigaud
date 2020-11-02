@@ -1,0 +1,50 @@
+@import "../../App.scss";
+
+
+/* Monument */
+
+.monument{
+    background:  $mainGrey;
+    border-radius: 0.8rem;
+  
+    img{
+        width: 100%;
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        display: block;
+    }
+  }
+  
+
+  
+  .img-container{
+    position: relative;
+  }
+  
+  .monument-info{
+    padding: 1 rem 0.5 rem;
+  
+    h3{
+        text-transform: uppercase;
+        color: $mainGreen;
+    }
+  
+    h4{
+        text-transform: capitalize;
+        color: $mainBlack;
+        margin: 0.2rem 0 0.6rem 0;
+    }
+  
+  
+    h5{
+        text-transform: capitalize;
+       
+        span{
+            color: $mainGreen;
+            margin: 0.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+  }
+  

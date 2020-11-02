@@ -1,10 +1,10 @@
 
-import './App.css';
 import { Route, Switch} from 'react-router-dom'
 import NavBar from './components/Navbar'
 import Home from './pages/home'
 import Error from './pages/Error'
-import Monuments from './pages/Monements'
+import Monuments from './components/monumentList'
+import './App.scss';
 
 function App() {
   return (
