@@ -1,35 +1,62 @@
-import React, { Component } from 'react'
-import  './Monument.scss'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import  './Monument.scss';
+import imgCarte from '../../images/carte-cimetiere.jpg';
+import Title from '../Title'
 
 export default class Monument extends Component {
     
     state = {
-        showInfo:true
+        slug: '1'
     }
 
-    handleInfo = () => {
-        this.setState({showInfo: !this.state.showInfo })
-   }
+    handleChange = event => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState(
+            {
+                [name]: value
+            },
+        );
+    };
 
+   
+    
     render() {
-        const {img,name,info} = this.props.monument;
+        const handleChange = this.handleChange;
+        const slug = this.state.slug;
         return (
-            <article className="monument">
-            <div className="img-container">
-                <img src={img} 
-                alt=''
-                />
-            </div>
-            <div className="monument-info">
-                <h4>{name}</h4>
-                <h5>info{" "} 
-                    <span onClick={this.handleInfo}>
-                        <i class="fas fa-caret-square-down"></i>
-                    </span> 
-                </h5>
-                {this.state.showInfo  && <p>{info}</p>} 
-            </div>
-        </article>
-        )
-    }
-}
+            <>
+               <section className="filter-container">
+                    <Title title="Photo des monuments funéraires" />
+					<form className="filter-form">
+                    <div className="form-group">
+                            <div className="size-input">
+                                <label htmlFor="noCase">Numero de la case</label>
+                                <input
+                                    type="text"
+                                    name="slug"
+                                    value={slug}
+                                    onChange={handleChange}
+                                    className="size-input"
+                                />
+                                <Link to={`/monument/${slug}`} className="btn-primary size-input" >
+                                        Afficher Photo
+                                </Link>
+                            </div>
+                        </div>
+					</form>
+                </section>    
+               <article className="monument">
+                    <div className="img-container">
+                        <img src={imgCarte} alt='monument'/>
+                    </div>
+            </article>
+            </>
+        );
+    };
+};
+
+
+export const MemoixzedMonument = React.memo(Monument);

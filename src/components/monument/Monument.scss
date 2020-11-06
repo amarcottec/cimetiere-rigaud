@@ -4,47 +4,121 @@
 /* Monument */
 
 .monument{
-    background:  $mainGrey;
-    border-radius: 0.8rem;
-  
-    img{
-        width: 100%;
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        display: block;
-    }
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    
   }
-  
 
-  
+  .monument:hover {
+    box-shadow: var(--darkShadow);
+  }
+
+
   .img-container{
     position: relative;
   }
-  
-  .monument-info{
-    padding: 1 rem 0.5 rem;
-  
-    h3{
-        text-transform: uppercase;
-        color: $mainGreen;
-    }
-  
-    h4{
-        text-transform: capitalize;
-        color: $mainBlack;
-        margin: 0.2rem 0 0.6rem 0;
-    }
-  
-  
-    h5{
-        text-transform: capitalize;
-       
-        span{
-            color: $mainGreen;
-            margin: 0.5rem;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-    }
+
+  .img-container img {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+  }
+
+  .img-container:hover img {
+    opacity: 0.3;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: var(--mainBlack);
+    background: var(--primaryColor);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--primaryColor);
+  }
+
+  .monument-link {
+    position: relative;
+    transition: all 0.3s linear;
   }
   
+  
+  .monument-info{
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+  }
+
+  .form-group {
+    text-transform: capitalize;
+  }
+  .form-group label {
+    display: block;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 0.5rem;
+  }
+ 
+  /* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+/* end of Title */
+
+
+  .size-inputs {
+    display: flex;
+  }
+  .size-input {
+    width: 40%;
+    padding: 0.2rem;
+    border: 1px solid var(--mainBlack);
+    border-radius: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  .filter-container {
+    padding: 5rem 0;
+  }
+  .filter-form {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+  }
+  
+  @media screen and (min-width: 776px) {
+    .filter-form {
+      width: 70vw;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .filter-form {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }

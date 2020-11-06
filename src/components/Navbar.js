@@ -30,7 +30,7 @@ export default class Navbar extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/monuments">Monuments</Link>
+                <Link to="/monument">Carte</Link>
               </li>
             </ul>
           </div>
