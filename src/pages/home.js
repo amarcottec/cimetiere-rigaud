@@ -13,8 +13,8 @@ export default function home() {
             </div>
             <div className="wrapper">
                 <article class="img-info">
-                    <p>Ce site vous permet de consulter la carte du cimetitère de Rigaud et pour chaque monument identifé par un numéro de lot vous pouvoir 
-                    une image du monument funéraire.</p> 
+                    <p>Ce site vous permet de consulter la carte du cimetitère de Rigaud et pour chaque monument identifé par un numéro de lot vous pouvez 
+                    voir une image du monument funéraire.</p> 
                     <p>Consulter le menu carte pour voir la carte et appuyer sur la case correspondante au momument désiré.
                     En appuyant sur la case, une photo du monument va apparaitre.  
                     </p>
