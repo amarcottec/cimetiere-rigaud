@@ -54,8 +54,6 @@ export default class Monument extends Component {
               lineWidth={3}
               width={width}
               imgWidth={3600}
-              strokeColor={"gray"}
-              href="http://localhost:3000/monument/{slug}"
             />
           </div>
         </article>
