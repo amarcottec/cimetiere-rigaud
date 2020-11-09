@@ -23,7 +23,11 @@ $mainGrey: #ececec;
 $mainWhite: #fff;
 
 body{
-    background: $mainWhite;
+  padding-top: 66px;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
 }
 
 /* Navbar */
@@ -91,6 +95,20 @@ body{
   .nav-links a {
     margin: 0 1rem;
     padding: 0.5rem 0;
+  }
+
+  .home{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 }
 /* end of navbar */

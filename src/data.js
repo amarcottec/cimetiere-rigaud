@@ -2221,4 +2221,6 @@ export const monumentData = [
        slug: "370",
        img: img370,
    },
+
+   
 ];
