@@ -4,8 +4,7 @@
 /* Monument */
 
 .monument{
-    //box-shadow: var(--lightShadow);
-    //transition: var(--mainTransition);
+    width: 100%;
     
   }
 
@@ -18,8 +17,11 @@
     position: relative;
   }
 
-  .img-container img {
-    width: 100%;
+  .img-container{
+    img{
+      width: 100%;
+    }
+    
   }
 
  

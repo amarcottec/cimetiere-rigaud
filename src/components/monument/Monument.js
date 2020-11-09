@@ -6,7 +6,28 @@ import ImageMapper from "react-image-mapper";
 import { MAP } from "../../imageMapData";
 
 export default class Monument extends Component {
-  
+ 
+   constructor(props){
+       super(props);
+       this.state = { width : 0};
+       this.updateWindowDimension = this.updateWindowDimension.bind(this);
+   }
+   
+
+   componentDidMount() {
+    this.updateWindowDimension();
+    window.addEventListener('resize', this.updateWindowDimension);
+  }
+
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimension);
+  }
+   
+   updateWindowDimension(){
+       this.setState({width: window.innerWidth})
+   }
+    
   getInitialState() {
     return { hoveredArea: null, msg: null, moveMsg: null };
   }
@@ -16,6 +37,8 @@ export default class Monument extends Component {
   }
 
   render() {
+    
+     const width = this.state.width;
     return (
       <>
         <section className="filter-container">
@@ -29,7 +52,7 @@ export default class Monument extends Component {
               map={MAP}
               onClick={(area) => this.clicked(area)}
               lineWidth={3}
-              width={1500}
+              width={width}
               imgWidth={3600}
               strokeColor={"gray"}
               href="http://localhost:3000/monument/{slug}"
