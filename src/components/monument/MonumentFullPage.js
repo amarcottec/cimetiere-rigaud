@@ -25,9 +25,7 @@ export default class MonumentFullPage extends Component {
 
     render() {
         const monument = this.getMonument(this.state.slug);
-        console.log('allo');
         const {id, img} = monument;
-        console.log(img);
         return (
             <div className="imgFull">
             <img key={id} src={img} alt=''/>
