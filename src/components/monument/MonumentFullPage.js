@@ -11,8 +11,6 @@ export default class MonumentFullPage extends Component {
           slug: this.props.match.params.slug
           
         };
-
-        console.log('allo ' + this.state.slug);
     }
   
     getMonument = slug => {
