@@ -26,7 +26,7 @@ export default class MonumentFullPage extends Component {
         const {id, img} = monument;
         return (
             <div className="imgFull">
-            <img key={id} src={img} alt=''/>
+                <img key={id} src={img} alt=''/>
             </div>
         )
     };

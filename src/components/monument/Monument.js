@@ -9,7 +9,10 @@ export default class Monument extends Component {
  
    constructor(props){
        super(props);
-       this.state = { width : 0};
+       this.state = 
+       {  
+          width : 0
+       };
        this.updateWindowDimension = this.updateWindowDimension.bind(this);
    }
    
@@ -36,6 +39,24 @@ export default class Monument extends Component {
     this.props.history.push("/monument/" + area.name);
   }
 
+  enterArea(area) {
+		this.setState({
+			hoveredArea: area
+		});
+  }
+  
+	leaveArea(area) {
+		this.setState({
+			hoveredArea: null
+		});
+  }
+  
+  getTipPosition(area) {
+    console.log(area);
+
+    return { top: `${area.center[1]}px`, left: `${area.center[0]}px` };
+	}
+
   render() {
     
      const width = this.state.width;
@@ -44,17 +65,28 @@ export default class Monument extends Component {
         <section className="filter-container">
           <Title title="Photo des monuments funéraires" />
         </section>
+        
         <article className="monument">
-          <div OnClick="" className="img-container">
+          <div  className="img-container">
             <ImageMapper
               src={imgCarte}
               alt="monument"
               map={MAP}
               onClick={(area) => this.clicked(area)}
+              onMouseEnter={area => this.enterArea(area)}
+							onMouseLeave={area => this.leaveArea(area)}
               lineWidth={3}
               width={width}
               imgWidth={3600}
             />
+            {
+            this.state.hoveredArea && 
+              <span
+								  className="tooltip"
+								  style={{ ...this.getTipPosition(this.state.hoveredArea) }}>
+								{this.state.hoveredArea && this.state.hoveredArea.name}
+							</span>
+          }
           </div>
         </article>
       </>
