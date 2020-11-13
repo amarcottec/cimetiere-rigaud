@@ -45,7 +45,7 @@ export default class Monument extends Component {
           <Title title="Photo des monuments funéraires" />
         </section>
         <article className="monument">
-          <div className="img-container">
+          <div OnClick="" className="img-container">
             <ImageMapper
               src={imgCarte}
               alt="monument"
