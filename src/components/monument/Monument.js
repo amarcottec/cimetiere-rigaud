@@ -36,14 +36,7 @@ export default class Monument extends Component {
   }
 
   clicked(area) {
-    if(this.state.numberClick < 2){
-      this.setState({numberClick: this.state.numberClick + 1});
-    }
-    else{
-      this.props.history.push("/monument/" + area.name);
-      this.setState({numberClick: 0});
-    }
-    
+    //this.props.history.push("/monument/" + area.name);
   }
 
   enterArea(area) {
