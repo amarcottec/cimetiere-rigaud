@@ -32,11 +32,18 @@ export default class Monument extends Component {
    }
     
   getInitialState() {
-    return { hoveredArea: null, msg: null, moveMsg: null };
+    return { hoveredArea: null, msg: null, moveMsg: null, numberClick: 0 };
   }
 
   clicked(area) {
-    //this.props.history.push("/monument/" + area.name);
+    if(this.state.numberClick < 2){
+      this.setState({numberClick: this.state.numberClick + 1});
+    }
+    else{
+      this.props.history.push("/monument/" + area.name);
+      this.setState({numberClick: 0});
+    }
+    
   }
 
   enterArea(area) {
