@@ -79,14 +79,6 @@ export default class Monument extends Component {
               width={width}
               imgWidth={3600}
             />
-            {
-            this.state.hoveredArea && 
-              <span
-								  className="tooltip"
-								  style={{ ...this.getTipPosition(this.state.hoveredArea) }}>
-								{this.state.hoveredArea && this.state.hoveredArea.name}
-							</span>
-          }
           </div>
         </article>
       </>
