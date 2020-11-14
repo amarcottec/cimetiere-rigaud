@@ -36,7 +36,7 @@ export default class Monument extends Component {
   }
 
   clicked(area) {
-    this.props.history.push("/monument/" + area.name);
+    //this.props.history.push("/monument/" + area.name);
   }
 
   enterArea(area) {
