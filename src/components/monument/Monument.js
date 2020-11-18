@@ -9,7 +9,6 @@ import { MAP } from "../../imageMapData";
 
 export default class Monument extends Component {
    
-    
   constructor(props){
        super(props);
        this.state = 
