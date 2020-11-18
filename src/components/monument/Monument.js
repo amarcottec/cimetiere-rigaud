@@ -5,9 +5,12 @@ import Title from "../Title";
 import ImageMapper from "react-image-mapper";
 import { MAP } from "../../imageMapData";
 
+
+
 export default class Monument extends Component {
- 
-   constructor(props){
+   
+    
+  constructor(props){
        super(props);
        this.state = 
        {  
@@ -36,7 +39,7 @@ export default class Monument extends Component {
   }
 
   clicked(area) {
-    //this.props.history.push("/monument/" + area.name);
+    this.props.history.push("/monument/" + area.name);
   }
 
   enterArea(area) {
@@ -57,15 +60,17 @@ export default class Monument extends Component {
     return { top: `${area.center[1]}px`, left: `${area.center[0]}px` };
 	}
 
+  
   render() {
     
-     const width = this.state.width;
+    const width = this.state.width;
+   
+    
     return (
       <>
         <section className="filter-container">
           <Title title="Photo des monuments funéraires" />
         </section>
-        
         <article className="monument">
           <div  className="img-container">
             <ImageMapper
