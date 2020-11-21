@@ -70,13 +70,13 @@ export const MAP = {
     {
       name: "2",
       shape: "rect",
-      coords: [1776, 3553, 1906, 3641],
+      coords: [1775, 3553, 1906, 3641],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
       name: "1",
-      shape: "rect",
-      coords: [1776, 3641, 1906, 3729],
+      shape: "poly",
+      coords: [1775, 3631, 1775, 3751, 1907, 3722, 1906, 3631],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -153,8 +153,26 @@ export const MAP = {
     },
     {
       name: "65",
+      shape: "poly",
+      coords: [1907, 3630, 1907, 3720, 2041, 3690, 2039, 3631],
+      fillColor: "rgba(125,154,175,0.5)",
+    },
+    {
+      name: "33",
+      shape: "poly",
+      coords: [1776, 807, 1778, 935, 1907, 934, 1907, 886],
+      fillColor: "rgba(125,154,175,0.5)",
+    },
+    {
+      name: "32",
       shape: "rect",
-      coords: [1911, 3640, 2041, 3728],
+      coords: [1776, 936, 1906, 1038],
+      fillColor: "rgba(125,154,175,0.5)",
+    },
+    {
+      name: "34",
+      shape: "poly",
+      coords: [1907, 887, 1909, 1038, 2040, 1038, 2040, 964],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -453,8 +471,8 @@ export const MAP = {
     },
     {
       name: "66",
-      shape: "rect",
-      coords: [1541, 3717, 1662, 3804],
+      shape: "poly",
+      coords: [1540, 3711, 1540, 3797, 1665, 3773, 1664, 3711],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -537,8 +555,8 @@ export const MAP = {
     },
     {
       name: "140",
-      shape: "rect",
-      coords: [1402, 3717, 1540, 3804],
+      shape: "poly",
+      coords: [1401, 3711, 1401, 3828, 1541, 3798, 1541, 3711],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -671,6 +689,18 @@ export const MAP = {
       name: "80",
       shape: "rect",
       coords: [1525, 2413, 1665, 2496],
+      fillColor: "rgba(125,154,175,0.5)",
+    },
+    {
+      name: "102",
+      shape: "poly",
+      coords: [1525, 527, 1525, 667, 1635, 667],
+      fillColor: "rgba(125,154,175,0.5)",
+    },
+    {
+      name: "103",
+      shape: "poly",
+      coords: [1402, 366, 1402, 588, 1524, 588, 1524, 527],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
