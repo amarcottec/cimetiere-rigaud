@@ -38,7 +38,8 @@ export default class Monument extends Component {
   }
 
   clicked(area) {
-    this.props.history.push("/monument/" + area.name);
+    let imgNumber  = Math.floor(Math.random() * 370)
+    this.props.history.push("/monument/" + imgNumber.toString());
   }
 
   enterArea(area) {
