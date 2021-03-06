@@ -4,7 +4,8 @@ import imgCarte from "../../images/carte-cimetiere.jpg";
 import Title from "../Title";
 import ImageMapper from "react-image-mapper";
 import { MAP } from "../../imageMapData";
-
+import AutoCompleteText from "./AutoCompleteText";
+import {monumentData} from "../../data";
 
 
 export default class Monument extends Component {
@@ -13,15 +14,28 @@ export default class Monument extends Component {
        super(props);
        this.state = 
        {  
-          width : 0
+          width : 0,
+          persons: [],
        };
        this.updateWindowDimension = this.updateWindowDimension.bind(this);
+
    }
    
 
    componentDidMount() {
     this.updateWindowDimension();
     window.addEventListener('resize', this.updateWindowDimension);
+
+
+    let counter = 0;
+    const personList= [];
+    monumentData.forEach(e => {
+     personList[counter] = e.name;
+     counter++;
+    });
+
+   this.setState({persons: personList});
+
   }
 
 
@@ -58,16 +72,18 @@ export default class Monument extends Component {
     console.log(area);
 
     return { top: `${area.center[1]}px`, left: `${area.center[0]}px` };
-	}
-
-  
+  }
+    
   render() {
     
-    const width = this.state.width;
-   
-    
+  const width = this.state.width;
+  
     return (
       <>
+      <div className='AutoCompleteText-Component'>
+      <AutoCompleteText items={this.state.persons}/>
+      </div>
+      
         <section className="filter-container">
           <Title title="Photo des monuments funéraires" />
         </section>

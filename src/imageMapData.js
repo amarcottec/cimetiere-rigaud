@@ -280,9 +280,10 @@ export const MAP = {
     {
       name: "14",
       shape: "rect",
-      coords: [1778, 2417, 1908, 2498],
+      coords: [1777,2417,1907,2490],
       fillColor: "rgba(125,154,175,0.5)",
     },
+    
     {
       name: "35",
       shape: "rect",
@@ -388,7 +389,7 @@ export const MAP = {
     {
       name: "52",
       shape: "rect",
-      coords: [1908, 2417, 2038, 2498],
+      coords: [1906,2417,2040,2489],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -778,19 +779,19 @@ export const MAP = {
     {
       name: "116",
       shape: "rect",
-      coords: [1404, 1580, 1527, 1663],
+      coords: [1404, 1582, 1527, 1663],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
       name: "117",
       shape: "rect",
-      coords: [1404, 1663, 1527, 1746],
+      coords: [1404, 1665, 1527, 1746],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
       name: "118",
       shape: "rect",
-      coords: [1404, 1746, 1527, 1829],
+      coords: [1404, 1750, 1527, 1829],
       fillColor: "rgba(125,154,175,0.5)",
     },
     {
@@ -838,7 +839,7 @@ export const MAP = {
     {
       name: "126",
       shape: "rect",
-      coords: [1404, 2410, 1527, 2493],
+      coords: [1402,2418,1527,2490],
       fillColor: "rgba(125,154,175,0.5)",
     },
 
