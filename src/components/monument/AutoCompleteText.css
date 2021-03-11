@@ -40,4 +40,13 @@
     background-color: rgba(128, 128, 128, 0.20);
 }
 
+.AutoCompleteSearch{
+    display: flex;
+}
+
+.SearchButton{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
  

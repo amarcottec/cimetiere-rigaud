@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import './AutoCompleteText.css' 
-
 export default class AutoCompleteText extends Component {
     
     constructor(props){
         super(props);
+
         this.state = {
             suggestions: [],
             text: '',
@@ -19,8 +19,8 @@ export default class AutoCompleteText extends Component {
     }
 
     onTextChanged = async (e) => {
-        const { items } = this.props;
         const value = e.target.value;
+        const { items } = this.props;
         let suggestions = [];
         if (value.length > 0){ 
             suggestions = items.filter(v => v.toLowerCase().includes(value.toLowerCase()) );
@@ -29,6 +29,12 @@ export default class AutoCompleteText extends Component {
             suggestions: suggestions,
             text: value,
         }));
+    }
+
+    onChercher = () => {
+        const text = this.state.text;
+        const { updateInput } = this.props;
+        updateInput(text);
     }
 
     renderSuggestions() {
@@ -40,18 +46,28 @@ export default class AutoCompleteText extends Component {
         
         return (
             <ul>
-            {suggestions.map((item, key) => <li id={key}  onClick={ () => this.suggestionSelected(item)}>{item}</li>)}
+            {suggestions.map((item, index) => <li key={index}  onClick={ () => this.suggestionSelected(item)}>{item}</li>)}
             </ul>
         );
     }
     
     render() {
         const {text} = this.state;
+       
         return (
-            <div className='AutocompleteText'>
-                <input value={text} type='text' onChange={this.onTextChanged}/>
-                {this.renderSuggestions()}
+            <>
+            <div className='AutoCompleteSearch'>
+                <div className='AutocompleteText'>
+                    <input value={text} type='text' onChange={this.onTextChanged}/>
+                    {this.renderSuggestions()}
+                    
+                </div>
+                <div>
+                <button className='SearchButton' onClick={this.onChercher}>Chercher</button>
+                </div>
             </div>
+            </>
+             
         )
     }
 }
