@@ -3,6 +3,8 @@ import './Monument.scss'
 import {monumentData} from '../../data'
 import Loading from "../Loading"
 import {MonumentContext} from '../../context'
+import Gallery from './Gallery'
+
 
 export default class MonumentFullPage extends Component {
     static contextType = MonumentContext;
@@ -22,6 +24,8 @@ export default class MonumentFullPage extends Component {
         const monument = tempMonuments.find(monu => monu.slug === slug);
         return monument;
       };
+
+     
   
 
     render() {
@@ -35,7 +39,7 @@ export default class MonumentFullPage extends Component {
         
         return (
             <div className="imgFull">
-                <img key={id} src={img} alt=''/>
+               <Gallery imageUrls={img} />
             </div>
         )
     };
